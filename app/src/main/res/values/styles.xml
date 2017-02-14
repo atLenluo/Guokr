@@ -1,0 +1,39 @@
+<resources>
+
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="actionMenuTextColor">@color/menu_item_text</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar" parent="@style/AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.NoActionBar.FullScreen" parent="@style/AppTheme.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="AppTheme.NoActionBar.Translucent" parent="@style/AppTheme.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+    <style name="error_text">
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:textColor">@color/error_text_color</item>
+    </style>
+    <style name="AppTheme.CategoryTab" parent="@style/Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">#ff09ae5d</item>
+        <item name="tabIndicatorHeight">1.0dip</item>
+        <item name="tabTextAppearance">@style/AppTheme.CategoryTabText</item>
+        <item name="tabSelectedTextColor">#ff09ae5d</item>
+    </style>
+    <style name="AppTheme.CategoryTabText" parent="@style/TextAppearance.Design.Tab">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">#ff9c9c9c</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="@style/ThemeOverlay.AppCompat.Light" />
+
+</resources>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/common_bg_dark">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include layout="@layout/toolbar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <EditText
+        android:id="@id/password"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_below="@id/username"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginTop="15.0dip"
+        android:background="@drawable/bg_feedback_edit"
+        android:hint="密码"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="85.0dip"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint"
+        android:textSize="16.0sp" />
+
+    <TextView
+        android:id="@id/forgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/password"
+        android:layout_alignRight="@id/password"
+        android:layout_alignTop="@id/password"
+        android:gravity="center"
+        android:padding="8.0dip"
+        android:text="忘记密码？"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14.0sp" />
+
+    <EditText
+        android:id="@id/captcha"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_below="@id/password"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginTop="15.0dip"
+        android:background="@drawable/bg_feedback_edit"
+        android:hint="验证码"
+        android:inputType="text"
+        android:maxLength="4"
+        android:maxLines="1"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="85.0dip"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint"
+        android:textSize="16.0sp" />
+
+    <ImageView
+        android:id="@id/captchaImage"
+        android:layout_width="100.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/captcha"
+        android:layout_alignRight="@id/captcha"
+        android:layout_alignTop="@id/captcha"
+        android:layout_margin="8.0dip"
+        android:scaleType="fitXY"
+        android:src="@color/img_placeholder" />
+
+    <ImageView
+        android:id="@id/refreshCaptcha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/captchaImage"
+        android:layout_alignTop="@id/captchaImage"
+        android:layout_toLeftOf="@id/captchaImage"
+        android:src="@drawable/icon_refresh" />
+
+    <TextView
+        android:id="@id/licences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/captcha"
+        android:layout_below="@id/captcha"
+        android:layout_marginTop="15.0dip"
+        android:clickable="true"
+        android:text="查看《用户服务协议》及《隐私条款》"
+        android:textColor="#ff828282"
+        android:textSize="11.0sp" />
+
+    <TextView
+        android:id="@id/login"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_alignLeft="@id/captcha"
+        android:layout_alignRight="@id/captcha"
+        android:layout_below="@id/licences"
+        android:layout_marginTop="15.0dip"
+        android:background="@drawable/selector_bg_button"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@android:color/white"
+        android:textSize="18.0sp" />
+
+    <TextView
+        android:id="@id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/login"
+        android:layout_below="@id/login"
+        android:layout_marginTop="15.0dip"
+        android:text="第三方账号登录"
+        android:textColor="#ff828282"
+        android:textSize="12.0sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/login"
+        android:layout_alignRight="@id/login"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="15.0dip"
+        android:background="@drawable/bg_feedback_edit"
+        android:orientation="horizontal"
+        android:paddingBottom="9.0dip"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="15.0dip"
+        android:paddingTop="9.0dip">
+
+        <LinearLayout
+            android:id="@id/loginWechat"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/attr_home_item_bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="15.0dip"
+            android:paddingTop="10.0dip">
+
+            <ImageView
+                android:layout_width="44.0dip"
+                android:layout_height="44.0dip"
+                android:src="@drawable/login_wechat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="微信"
+                android:textColor="#ff8c8c8c"
+                android:textSize="15.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/loginWeibo"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/attr_home_item_bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="15.0dip"
+            android:paddingTop="10.0dip">
+
+            <ImageView
+                android:layout_width="44.0dip"
+                android:layout_height="44.0dip"
+                android:src="@drawable/login_weibo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="微博"
+                android:textColor="#ff8c8c8c"
+                android:textSize="15.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/loginQQ"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/attr_home_item_bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="15.0dip"
+            android:paddingTop="10.0dip">
+
+            <ImageView
+                android:layout_width="44.0dip"
+                android:layout_height="44.0dip"
+                android:src="@drawable/login_qq" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="QQ"
+                android:textColor="#ff8c8c8c"
+                android:textSize="15.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/loginDouban"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/attr_home_item_bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="15.0dip"
+            android:paddingTop="10.0dip">
+
+            <ImageView
+                android:layout_width="44.0dip"
+                android:layout_height="44.0dip"
+                android:src="@drawable/login_douban" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="豆瓣"
+                android:textColor="#ff8c8c8c"
+                android:textSize="15.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35.0dip"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="还没有账号？"
+            android:textColor="#ff8c8c8c"
+            android:textSize="15.0sp" />
+
+        <TextView
+            android:id="@id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="注册新用户"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15.0sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@id/username"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/bg_feedback_edit"
+        android:hint="手机号或果壳网账号邮箱"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint"
+        android:textSize="16.0sp"
+        android:layout_below="@+id/appbar"
+        android:layout_alignLeft="@+id/password"
+        android:layout_alignStart="@+id/password" />
+</RelativeLayout>

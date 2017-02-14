@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include layout="@layout/toolbar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_18"
+        android:textColor="@color/text_primary"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="欢迎加入果壳"/>
+
+    <EditText
+        android:id="@id/phoneNumber"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:background="@drawable/bg_feedback_edit"
+        android:hint="手机号"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint"
+        android:textSize="16.0sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.0dip"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@id/captcha"
+            android:layout_width="150dp"
+            android:layout_height="45.0dip"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:background="@drawable/bg_feedback_edit"
+            android:hint="填写右侧字符"
+            android:inputType="text"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:textSize="16.0sp" />
+
+        <ImageView
+            android:id="@id/captchaImage"
+            android:layout_width="100.0dip"
+            android:layout_height="38dp"
+            android:layout_marginRight="8dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:src="@color/img_placeholder" />
+
+        <ImageView
+            android:id="@id/refreshCaptcha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/icon_refresh" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.0dip"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="45.0dip"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:background="@drawable/bg_feedback_edit"
+            android:hint="请填写手机验证码"
+            android:inputType="text"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45.0dip"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:background="@drawable/selector_search_recommendation_item"
+            android:gravity="center"
+            android:layout_marginRight="15dip"
+            android:text="发送验证码"
+            android:textColor="@color/search_item_text_color"
+            android:textSize="18.0sp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@id/register"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_marginTop="15.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:background="@drawable/selector_bg_button"
+        android:gravity="center"
+        android:text="注册"
+        android:textColor="@android:color/white"
+        android:textSize="18.0sp" />
+
+</LinearLayout>

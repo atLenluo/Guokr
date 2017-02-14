@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <padding android:left="@dimen/home_article_image_hint_padding_h" android:top="@dimen/home_article_image_hint_padding_v" android:right="@dimen/home_article_image_hint_padding_h" android:bottom="@dimen/home_article_image_hint_padding_v" />
+    <solid android:color="@color/home_article_img_hint_bg" />
+</shape>

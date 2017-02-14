@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include layout="@layout/toolbar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/confirm_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_16"
+        android:textColor="@color/colorPrimary"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="手机号验证成功！你的手机号是：15676822703"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_16"
+        android:textColor="@color/text_primary"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="请输入密码和昵称，创建你的果壳账号"/>
+
+
+    <EditText
+        android:id="@id/nickname"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginTop="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:background="@drawable/bg_feedback_edit"
+        android:hint="昵称"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint"
+        android:textSize="16.0sp" />
+
+    <EditText
+        android:id="@id/password"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginTop="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:background="@drawable/bg_feedback_edit"
+        android:hint="密码"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint"
+        android:textSize="16.0sp" />
+
+    <EditText
+        android:id="@id/passwordConfirm"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginTop="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:background="@drawable/bg_feedback_edit"
+        android:hint="确认密码"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint"
+        android:textSize="16.0sp" />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/protocol"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="已经认真阅读并同意果壳《使用协议》"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/font_12" />
+
+    <TextView
+        android:id="@+id/create_account"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_marginTop="15.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:background="@drawable/selector_bg_button"
+        android:gravity="center"
+        android:text="创建账号"
+        android:textColor="@android:color/white"
+        android:textSize="18.0sp" />
+
+</LinearLayout>

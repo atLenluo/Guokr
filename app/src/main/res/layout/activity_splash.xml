@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@id/splash"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/default_splash_image" />
+
+    <View
+        android:id="@id/splash_slogan_shade"
+        android:layout_width="fill_parent"
+        android:layout_height="160.0dip"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_splash_slogan" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="25.0dip"
+        android:src="@drawable/slogan_colorful" />
+
+    <TextView
+        android:id="@id/splash_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="110.0dip"
+        android:background="@drawable/bg_splash_hint"
+        android:clickable="true"
+        android:paddingBottom="10.0dip"
+        android:paddingLeft="20.0dip"
+        android:paddingRight="20.0dip"
+        android:paddingTop="10.0dip"
+        android:textColor="#ffffffff"
+        android:textSize="19.0sp"
+        android:visibility="gone" />
+
+</FrameLayout>

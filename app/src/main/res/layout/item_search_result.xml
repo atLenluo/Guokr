@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/attr_home_item_bg">
+
+    <RelativeLayout
+        android:id="@id/relativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@id/imageContainer"
+            android:layout_width="@dimen/home_article_image_width"
+            android:layout_height="@dimen/home_article_image_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="20.0dip"
+            android:layout_marginRight="15.0dip"
+            android:layout_marginTop="20.0dip">
+
+            <ImageView
+                android:id="@id/image"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@id/videoIndicator"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_video_play"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/imageContainer">
+
+            <TextView
+                android:id="@id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="20.0dip"
+                android:ellipsize="end"
+                android:textColor="@color/text_primary"
+                android:textSize="17.0sp" />
+
+            <TextView
+                android:id="@id/summary"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/title"
+                android:layout_alignRight="@id/title"
+                android:layout_below="@id/title"
+                android:layout_marginTop="5.0dip"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingBottom="15.0dip"
+                android:textColor="@color/home_article_summary"
+                android:textSize="@dimen/font_13" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.30000007dip"
+        android:layout_below="@id/relativeLayout"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:background="@color/common_divider" />
+
+    <View
+        android:id="@id/wholeDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="0.30000007dip"
+        android:layout_below="@id/relativeLayout"
+        android:background="@color/common_divider"
+        android:visibility="gone" />
+</RelativeLayout>

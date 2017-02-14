@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="40.0dip"
+    android:background="#f7fafafa"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@id/message_bar_icon"
+        android:layout_width="17.0dip"
+        android:layout_height="17.0dip"
+        android:layout_marginRight="7.0dip"
+        android:src="@drawable/ic_tick" />
+
+    <TextView
+        android:id="@id/message_bar_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="刷新成功"
+        android:textColor="#ff09ad5e"
+        android:textSize="16.0sp" />
+</LinearLayout>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/common_bg_dark">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include layout="@layout/toolbar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/appbar">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@id/avatarContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/setting_item_height"
+                android:background="@drawable/attr_setting_item_bg"
+                android:paddingLeft="@dimen/setting_item_padding"
+                android:paddingRight="@dimen/setting_item_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="头像"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/font_17" />
+
+                <ImageView
+                    android:id="@id/avatar"
+                    android:layout_width="@dimen/avatar_size"
+                    android:layout_height="@dimen/avatar_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/default_menu_avatar" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.30000007dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/common_divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/nicknameContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/setting_item_height"
+                android:layout_below="@id/avatarContainer"
+                android:background="@drawable/attr_setting_item_bg"
+                android:paddingLeft="@dimen/setting_item_padding"
+                android:paddingRight="@dimen/setting_item_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="昵称"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/font_17" />
+
+                <TextView
+                    android:id="@id/nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="15.0sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.30000007dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/common_divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/passwordContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/setting_item_height"
+                android:layout_below="@id/nicknameContainer"
+                android:background="@drawable/attr_setting_item_bg"
+                android:paddingLeft="@dimen/setting_item_padding"
+                android:paddingRight="@dimen/setting_item_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="密码修改"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/font_17" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@id/textView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/passwordContainer"
+                android:paddingBottom="10.0dip"
+                android:paddingLeft="15.0dip"
+                android:paddingTop="10.0dip"
+                android:text="绑定账号"
+                android:textColor="@color/text_secondary"
+                android:textSize="12.0sp" />
+
+            <RelativeLayout
+                android:id="@id/phoneContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/setting_item_height"
+                android:layout_below="@id/textView"
+                android:background="@drawable/attr_setting_item_bg"
+                android:paddingLeft="@dimen/setting_item_padding"
+                android:paddingRight="@dimen/setting_item_padding">
+
+                <ImageView
+                    android:id="@id/imagePhone"
+                    android:layout_width="@dimen/avatar_size"
+                    android:layout_height="@dimen/avatar_size"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/login_phone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/imagePhone"
+                    android:text="手机号"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/font_17" />
+
+                <TextView
+                    android:id="@id/phoneStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_secondary"
+                    android:text="已绑定"
+                    android:textSize="15.0sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.30000007dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/common_divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/wechatContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/setting_item_height"
+                android:layout_below="@id/phoneContainer"
+                android:background="@drawable/attr_setting_item_bg"
+                android:paddingLeft="@dimen/setting_item_padding"
+                android:paddingRight="@dimen/setting_item_padding">
+
+                <ImageView
+                    android:id="@id/imageWechat"
+                    android:layout_width="@dimen/avatar_size"
+                    android:layout_height="@dimen/avatar_size"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/login_wechat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/imageWechat"
+                    android:text="微信账号"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/font_17" />
+
+                <TextView
+                    android:id="@id/wechatStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15.0sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.30000007dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/common_divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/weiboContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/setting_item_height"
+                android:layout_below="@id/wechatContainer"
+                android:background="@drawable/attr_setting_item_bg"
+                android:paddingLeft="@dimen/setting_item_padding"
+                android:paddingRight="@dimen/setting_item_padding">
+
+                <ImageView
+                    android:id="@id/imageWeibo"
+                    android:layout_width="@dimen/avatar_size"
+                    android:layout_height="@dimen/avatar_size"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/login_weibo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/imageWeibo"
+                    android:text="微博账号"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/font_17" />
+
+                <TextView
+                    android:id="@id/weiboStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15.0sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.30000007dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/common_divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/qqContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/setting_item_height"
+                android:layout_below="@id/weiboContainer"
+                android:background="@drawable/attr_setting_item_bg"
+                android:paddingLeft="@dimen/setting_item_padding"
+                android:paddingRight="@dimen/setting_item_padding">
+
+                <ImageView
+                    android:id="@id/imageQQ"
+                    android:layout_width="@dimen/avatar_size"
+                    android:layout_height="@dimen/avatar_size"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/login_qq" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/imageQQ"
+                    android:text="QQ账号"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/font_17" />
+
+                <TextView
+                    android:id="@id/qqStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15.0sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.30000007dip"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/common_divider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/doubanContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/setting_item_height"
+                android:layout_below="@id/qqContainer"
+                android:background="@drawable/attr_setting_item_bg"
+                android:paddingLeft="@dimen/setting_item_padding"
+                android:paddingRight="@dimen/setting_item_padding">
+
+                <ImageView
+                    android:id="@id/imageDouban"
+                    android:layout_width="@dimen/avatar_size"
+                    android:layout_height="@dimen/avatar_size"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/login_douban" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/imageDouban"
+                    android:text="豆瓣账号"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/font_17" />
+
+                <TextView
+                    android:id="@id/doubanStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15.0sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@id/logout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/doubanContainer"
+                android:layout_margin="15.0dip"
+                android:background="@drawable/selector_error_button"
+                android:gravity="center"
+                android:paddingBottom="13.0dip"
+                android:paddingTop="13.0dip"
+                android:text="退出登录"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

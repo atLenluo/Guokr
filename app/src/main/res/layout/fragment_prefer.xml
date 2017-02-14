@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/common_bg_dark"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@id/large_font"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/setting_item_height"
+            android:background="@drawable/attr_setting_item_bg"
+            android:paddingLeft="@dimen/setting_item_padding"
+            android:paddingRight="@dimen/setting_item_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/setting_large_font"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/font_17" />
+
+            <Switch
+                android:id="@id/large_font_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:textOn=""
+                android:textOff=""
+                android:button="@null"
+                android:thumbTextPadding="10dp"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/attr_switch_track" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/setting_divider_height"
+                android:layout_gravity="bottom"
+                android:background="@color/common_divider" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@id/clean_cache"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/setting_item_height"
+            android:background="@drawable/attr_setting_item_bg"
+            android:paddingLeft="@dimen/setting_item_padding"
+            android:paddingRight="@dimen/setting_item_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/setting_cache_clean"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/font_17" />
+
+            <TextView
+                android:id="@id/cache_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/font_12" />
+
+            <ImageView
+                android:id="@id/cleaning_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:src="@drawable/ic_loading_circle"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@id/set_service"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/setting_item_height"
+            android:background="@drawable/attr_setting_item_bg"
+            android:paddingLeft="@dimen/setting_item_padding"
+            android:paddingRight="@dimen/setting_item_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="设置服务器地址"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/font_17" />
+        </FrameLayout>
+
+        <Space
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/setting_module_gap" />
+
+        <FrameLayout
+            android:id="@id/feedback"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/setting_item_height"
+            android:background="@drawable/attr_setting_item_bg"
+            android:paddingLeft="@dimen/setting_item_padding"
+            android:paddingRight="@dimen/setting_item_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/setting_feedback"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/font_17" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/setting_divider_height"
+                android:layout_gravity="bottom"
+                android:background="@color/common_divider" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@id/about_us"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/setting_item_height"
+            android:background="@drawable/attr_setting_item_bg"
+            android:paddingLeft="@dimen/setting_item_padding"
+            android:paddingRight="@dimen/setting_item_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/setting_about_us"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/font_17" />
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>

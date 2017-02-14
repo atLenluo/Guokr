@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/home_item_holder"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="11.0dip"
+    android:background="@drawable/attr_home_item_bg">
+
+    <View
+        android:id="@id/divider_1"
+        android:layout_width="fill_parent"
+        android:layout_height="0.30000007dip"
+        android:layout_alignParentTop="true"
+        android:background="@color/home_list_item_divider" />
+
+    <LinearLayout
+        android:id="@id/card_source_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_below="@id/divider_1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/home_article_padding_h"
+        android:paddingRight="0.0dip">
+
+        <TextView
+            android:id="@id/card_source_name"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6.0dip"
+            android:layout_weight="1.0"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@id/card_category"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="15.0dip"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/font_10" />
+    </LinearLayout>
+
+    <View
+        android:id="@id/divider_2"
+        android:layout_width="fill_parent"
+        android:layout_height="0.30000007dip"
+        android:layout_below="@id/card_source_holder"
+        android:layout_marginBottom="20.0dip"
+        android:background="@color/home_list_item_divider" />
+
+    <TextView
+        android:id="@id/article_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider_2"
+        android:layout_marginBottom="5.0dip"
+        android:layout_marginRight="@dimen/home_article_title_img_gap"
+        android:layout_toLeftOf="@id/article_image"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="2.0dip"
+        android:maxLines="2"
+        android:paddingLeft="@dimen/home_article_padding_h"
+        android:paddingRight="0.0dip"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/font_17" />
+
+    <TextView
+        android:id="@id/article_summary"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_title"
+        android:layout_marginBottom="12.0dip"
+        android:layout_marginRight="@dimen/home_article_title_img_gap"
+        android:layout_toLeftOf="@id/article_image"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="2.0dip"
+        android:maxLines="2"
+        android:paddingLeft="@dimen/home_article_padding_h"
+        android:paddingRight="0.0dip"
+        android:textColor="@color/home_article_summary"
+        android:textSize="@dimen/font_13" />
+
+
+    <ImageView
+        android:id="@id/article_image"
+        android:layout_width="@dimen/home_article_image_width"
+        android:layout_height="@dimen/home_article_image_height"
+        android:layout_above="@id/share_btn"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/divider_2"
+        android:layout_marginBottom="12.0dip"
+        android:layout_marginRight="15.0dip"
+        android:background="@color/img_placeholder"
+        android:scaleType="centerCrop" />
+
+
+    <FrameLayout
+        android:id="@id/reply_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="30.0dip"
+        android:layout_below="@id/article_summary"
+        android:layout_marginBottom="12.0dip"
+        android:layout_toLeftOf="@id/like_btn"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip">
+
+        <TextView
+            android:id="@id/reply_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_reply"
+            android:drawablePadding="3.0dip"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/font_11" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@id/like_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="30.0dip"
+        android:layout_below="@id/article_summary"
+        android:layout_marginBottom="12.0dip"
+        android:layout_toLeftOf="@id/share_btn"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip">
+
+        <TextView
+            android:id="@id/like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/article_image_holder"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_article_like"
+            android:drawablePadding="3.0dip"
+            android:textColor="@color/text_hint"
+            android:textSize="@dimen/font_11" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@id/share_btn"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/article_summary"
+        android:layout_marginRight="7.0dip"
+        android:background="@drawable/attr_home_list_share_btn_bg">
+
+        <ImageView
+            android:id="@id/share_btn_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_article_list_share" />
+    </FrameLayout>
+
+    <View
+        android:id="@id/divider_3"
+        android:layout_width="fill_parent"
+        android:layout_height="0.30000007dip"
+        android:layout_below="@id/share_btn"
+        android:layout_marginTop="12.0dip"
+        android:background="@color/home_list_item_divider" />
+</RelativeLayout>
